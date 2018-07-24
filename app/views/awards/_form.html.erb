@@ -15,6 +15,13 @@
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  
+  <div class="field">
+    <%= form.label :student_id %><br />
+    <%= form.select :student_id, Student.all.order(:family_name, :given_name).collect 
+    { |s| [(s.given_name + " " + s.family_name), s.id]} %>
+    </div>
+  </div>
 
   <div class="field">
     <%= form.label :year %>

@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Awards</th>
       <th>Given name</th>
       <th>Middle name</th>
       <th>Family name</th>
@@ -24,6 +25,7 @@
         <td><%= student.date_of_birth %></td>
         <td><%= student.grade_point_average %></td>
         <td><%= student.start_date %></td>
+        <td><%= student.awards.count %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
