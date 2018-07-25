@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Awards</h1>
+<h1>Awards for <%= @student.name %></h1>
 
+<% if !@student.awards.empty? %>
 <table>
   <thead>
     <tr>
@@ -18,14 +19,19 @@
         <td><%= award.name %></td>
         <td><%= award.year %></td>
         <td><%= award.student.given_name %><%= award.student.family_name %></td>
-        <td><%= link_to 'Show', award %></td>
-        <td><%= link_to 'Edit', edit_award_path(award) %></td>
-        <td><%= link_to 'Destroy', award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [ @student, award] %></td>
+        <td><%= link_to 'Edit', edit_student_award_path(@student, award) %></td>
+        <td><%= link_to 'Destroy', [ @student, award], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<% else %>
+<p><%= @student.given_name %> hasn't won any awards yet.</p>
+<% end %>
 
-<%= link_to 'New Award', new_award_path %>
+
+<%= link_to 'New Award', new_student_award_path(@student) %> |
+<%= link_to 'Back', @student %>
