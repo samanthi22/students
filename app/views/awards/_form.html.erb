@@ -1,4 +1,4 @@
-<%= form_with(model: award, local: true) do |form| %>
+<%= form_for([@student, award]) do |form| %>
   <% if award.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(award.errors.count, "error") %> prohibited this award from being saved:</h2>

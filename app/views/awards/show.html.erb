@@ -15,5 +15,6 @@
   <%= @award.student.given_name %><%= @award.student.family_name %>
 </p>
 
-<%= link_to 'Edit', edit_award_path(@award) %> |
-<%= link_to 'Back', awards_path %>
+<%= link_to 'Edit', edit_student_award_path(@student, @award) %> |
+<%= link_to 'Awards', student_awards_path(@student) %> |
+<%= link_to 'Back', student_awards_path(@student) %>
