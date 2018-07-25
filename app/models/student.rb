@@ -5,4 +5,12 @@ class Student < ApplicationRecord
     def name
         given_name + " " + family_name
     end
+    
+    def enrolle_in?(course)
+        self.courses.include?(course)
+    end
+    
+    def unenrolled_courses
+        Course.all - self.courses
+    end
 end
