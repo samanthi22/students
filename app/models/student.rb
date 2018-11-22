@@ -6,7 +6,7 @@ class Student < ApplicationRecord
         given_name + " " + family_name
     end
     
-    def enrolle_in?(course)
+    def enrolled_in?(course)
         self.courses.include?(course)
     end
     
