@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_125409) do
+ActiveRecord::Schema.define(version: 2018_11_26_154321) do
 
   create_table "awards", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,18 @@ ActiveRecord::Schema.define(version: 2018_07_25_125409) do
     t.integer "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "book_with_columns", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
+    t.integer "isbn"
+    t.float "price"
+    t.date "published_date"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "language"
   end
 
   create_table "courses", force: :cascade do |t|
