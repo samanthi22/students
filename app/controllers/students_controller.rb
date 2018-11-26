@@ -72,9 +72,9 @@ class StudentsController < ApplicationController
     
     unless @student.enrolled_in?(@course)
     @student.courses << @course
-    flash[:notice] = Student was successfully enrolled
+    flash[:notice] = 'Student was successfully enrolled'
   else
-    flash[:error] = Student was already enrolled
+    flash[:error] = 'Student was already enrolled'
   end
   
   redirect_to action: "courses", id: @student
