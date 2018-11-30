@@ -53,4 +53,13 @@ app object parameters
 
 > app.controller.params
 
+```ruby
+<p id="notice"><%= notice %></p>
+<%= debug @student %>
+<p>
+<strong>Given name: </strong>
+<%= @student.given_name %>
+</p>
+```
+
 
