@@ -1,8 +1,6 @@
 debugging instead of <%= @student %>
 
-use ```ruby 
-<%= debug(@student) %>
-```
+use ```<%= debug(@student) %>```
 
 debugging in controller 
 
