@@ -68,6 +68,8 @@ in app/controllers/students_controller.rb
 
 debugger (like in javascript console - breakpoint)
 
+debugger (inspect variables (byebug) ```p @student```)
+
 debugger (like in javascript console stops at point - then type ```next``` and that's right after the keyword debugger also can type ```list``` to see where you are in the context of your source code afterwards type ```quit``` to quit)
 
 ```ruby
