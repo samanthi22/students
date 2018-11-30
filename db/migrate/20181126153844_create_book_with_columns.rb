@@ -7,5 +7,6 @@ class CreateBookWithColumns < ActiveRecord::Migration[5.2]
       t.float :price
       t.date :published_date
     end
+    add_index :book_with_columns, :isbn 
   end
 end
