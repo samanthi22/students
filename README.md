@@ -1,9 +1,6 @@
 Learning rails 5 - databases.
-ch 09
+ch 10
 
-rails db:rollback STEP=1 (previous, 2nd to last)
+>> rails db:rollback STEP=1 (previous, 2nd to last)
 
-debugging instead of <%= @student %>
-
-use <%= debug(@student) %>
-
+see DEBUGGING.md
