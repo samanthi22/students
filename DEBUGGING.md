@@ -53,6 +53,8 @@ app object parameters
 
 > app.controller.params
 
+use gem byebug gem
+
 ```ruby
 <p id="notice"><%= notice %></p>
 <%= debug @student %>
@@ -62,4 +64,27 @@ app object parameters
 </p>
 ```
 
+in app/controllers/students_controller.rb
+
+debugger (like in javascript console - breakpoint)
+
+debugger (like in javascript console stops at point - then type ```next``` and that's right after the keyword debugger also can type ```list``` to see where you are in the context of your source code afterwards type ```quit``` to quit)
+
+```ruby
+  def create
+    @student = Student.new(student_params)
+    
+    debugger
+    
+    respond_to do |format|
+      if @student.save
+        format.html { redirect_to @student, notice: 'Student was successfully created.' }
+        format.json { render :show, status: :created, location: @student }
+      else
+        format.html { render :new }
+        format.json { render json: @student.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+```
 
