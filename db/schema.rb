@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_154321) do
     t.integer "isbn"
     t.float "price"
     t.date "published_date"
+    t.index ["isbn"], name: "index_book_with_columns_on_isbn"
   end
 
   create_table "books", force: :cascade do |t|
